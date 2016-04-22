@@ -1,0 +1,166 @@
+*{
+    /*text-align: center;*/
+    /*color: #fff;*/
+    text-decoration: none;
+    padding:0px;
+    margin:0px;
+}
+header{
+    /*border: 2px solid red;*/
+    color: #fff;
+}
+.rowOne{
+    /*background-color: blue;*/
+    /*height:70px;*/
+    color:#00906e;
+}
+.rowTwo{
+    /*background-color: green;*/
+    /*height:70px;*/
+}
+.rowThree{
+    /*background-color: brown;*/
+    /*height:70px;*/
+}
+.rowFour{
+    background-color: orange;
+    /*height:70px;*/
+}
+
+.column1{
+    /*border: 2px solid black;*/
+}
+.column2{
+    /*border: 2px solid black;*/
+}
+.column3{
+    /*border: 2px solid black;*/
+}
+.column4{
+    /*border: 2px solid black;*/
+}
+.column5{
+    /*border: 2px solid black;*/
+}
+.column5{
+    /*border: 2px solid black;*/
+}
+
+
+.banner{
+    background-color: #00906e;
+    color:#fff;
+    padding:5px;
+    height: 120px;
+}
+.shipping{
+    padding: 5px;
+    color:#00906e;
+}
+.topMenu{
+    text-decoration: none;
+    color:#00906e;
+    padding: 10px;
+}
+md-input-container{
+    padding: 10px 40px;
+}
+.md-select.md-default-theme .md-select-value.md-select-placeholder, md-select .md-select-value.md-select-placeholder{
+    color:#00906e;
+    padding: 0px;
+
+}
+.ng-scope{
+    margin: 0px;
+}
+.topLinks{
+    text-decoration: none;
+    padding:5px;
+    color:#00906e;
+}
+.topBtns{
+    color:#fff;
+    background-color: #00906e;
+    height: 50px;
+    font-size: 20px;
+}
+.topBtns:hover{
+    color:#fff;
+    background-color: #00906e;
+    height: 50px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.uploadPres{
+    color:#00906e;
+}
+.uploadBtns{
+    color:#fff;
+    background-color: #00906e;
+    /*height: 70px;*/
+    font-size: 16px;
+}
+.uploadBtns:hover{
+    color:#fff;
+    background-color: #00906e;
+    /*height: 70px;*/
+    font-size: 18px;
+}
+.md-raised{
+    /*background-color: transparent !important;*/
+    /*color: #fff;*/
+}
+.md-raised:hover{
+    background-color: #00906e;
+}
+
+
+
+
+
+/*-------------------------------------------------------------*/
+footer{
+    background-color: #00906e;
+    color: #fff;
+    /*height: 200px;*/
+}
+.footerLinks{
+    /*width:100px;*/
+}
+.footerLinks label{
+    font-weight: bold;
+    letter-spacing:5px;
+    text-decoration: underline;
+}
+.footerLinks ul li a{
+    color:#fff;
+}
+.footerCopyRight{
+    border-top: 1px solid #fff;
+    padding-right: 40px;
+}
+.fa{
+    font-size: 26px;
+    border: 3px solid #FFF;
+    color: #FFF;
+    padding: 15px;
+    min-width: 26px;
+    background: transparent;
+    border-radius: 350px;
+    margin: 0px 10px;
+    text-align: center;
+}
+.fa:before{
+    /*content:"in";*/
+}
+.fa-cart-plus{
+    color: #00906e;
+}
+
+
+/*---------------------Menu CSS--------------------------------------------------*/
+
+.menudemoMenuWidth .md-menu-demo {
+  padding: 24px; }
+.menudemoMenuWidth .menu-demo-container {
+  min-height: 200px; }

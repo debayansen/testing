@@ -1,0 +1,65 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Get Registered</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="max-width:800px;max-height:810px; ">
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="1">
+          <md-content class="md-padding">
+            <form id='registerForm'>
+              <table>
+                <tr><td><label>Your Name</label>:</td><td><input type='text' name='userName'/></td></tr>
+                <tr><td><label>Your Mobile No.</label>:</td><td><input type='text' name='userMobile'/></td></tr>
+                <tr><td><label>Your Email</label>:</td><td>  <input type='text' name='userEmail'/></td></tr>
+                <tr><td><label>Enter password</label>:</td><td><input type='password' name='userpwd'/></td></tr>
+                <tr><td><label>Re-enter password</label>:</td><td><input type='password' name='userpwd'/></td></tr>
+                <!-- <input type='submit' value='next'/> -->
+              </table>
+            </form>
+          </md-content>
+        </md-tab>
+        <md-tab label="2">
+          <md-content class="md-padding">
+            <!-- <h1 class="md-display-2">2</h1> -->
+            <form id='otpVerify'>
+              <label>Please enter your OTP number sent to your registered mobile no./email</label>:<br/>
+              <input type='text' name='otp' layout='row' flex/><br/>
+              <p>Didn't get the OTP? <a href=''>Resend OPT</a> or <a href=''>Change Number.</a></p>
+              <!-- <input type='submit' value='next'/> -->
+            </form>
+          </md-content>
+        </md-tab>
+        <md-tab label="3">
+          <md-content class="md-padding">
+
+            <!-- <h1 class="md-display-2">Upload Prescription</h1> -->
+            <md-whiteframe layout='row'>
+              <md-whiteframe layout='row' flex='30' style='border-right:1px solid grey;'>1</md-whiteframe>
+              <md-whiteframe layout='row' flex>2</md-whiteframe>
+            </md-whiteframe>
+
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+        Previous
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="answer('not useful')" >
+        Register Now
+      </md-button>
+      <md-button ng-click="answer('useful')" style="margin-right:20px;" >
+        Next
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

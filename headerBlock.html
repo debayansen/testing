@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <!-- Angular Material style sheet -->
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+      <!-- Angular Material requires Angular.js Libraries -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+      <!-- Angular Material Library -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <script src='js/app.js'></script>
+      <link rel="stylesheet" href="css/test1.css">
+  </head>
+  <body ng-app="test" layout="column" ng-cloak layout-padding>
+      <header layout="column" >
+          <div class='rowOne' flex layout='row'>
+              <div class='column1 banner' flex='20'>Emami Frank Ross</div>
+              <div class='column2' flex='80' layout='row'>
+                  <div class='shipping' flex='20'>
+                      <md-input-container ng-controller="ShippingStates as states">
+                         <label class='shippingState'>Shipping to:</label>
+                         <md-select ng-model="ctrl.userState">
+                           <md-option ng-repeat="state in ctrl.states" value="{{state.name}}">
+                             {{state.name}}
+                           </md-option>
+                         </md-select>
+                       </md-input-container>
+                  </div>
+                  <div class='topMenu' layout='row' flex layout-align='end start'>
+                      <a class='topLinks' href='#'>DownLoad App</a>
+                      <a class='topLinks' href='#'>Store Locator</a>
+                      <a class='topLinks' href='#'>Sign In</a>
+                      <a class='topLinks' href='#'>Kart</a>
+                      <a class='topLinks' href='#'>Notification</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class='rowTwo' layout='row' flex layout-align="end center">
+              <md-button class='topBtns1 '></md-button>
+              <md-button flex class="topBtns">Category</md-button>
+              <md-button flex class="topBtns">My Prescriptions</md-button>
+              <md-button flex class="topBtns">Re-Order</md-button>
+              <md-button flex class="topBtns">Offers</md-button>
+          </div>
+
+          <div class='rowThree' flex layout='row'>
+              <div flex layout='row' layout-align='start center'><input flex type='text' placeholder='Search your medicines here' layout-padding='0px 0px 0px 5px'/></div>
+              <div flex layout='row' layout-align='end center' class='uploadPres' layout-margin='0px 0px 0px 15px'>
+                  Finding it hard to read your prescription, <md-button class='uploadBtns'>Upload Prescription here</md-button>
+              </div>
+          </div>
+
+      </header>
+  </body>
+</html>

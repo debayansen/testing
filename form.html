@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+</head>
+
+<body>
+    <form name='appointmentForm'>
+
+    <lable>Name: </lable>
+        <!-- <input name="type" value="Visitor Name" type="hidden"> -->
+                <input id="inputPhone_2" name="visitorName" autofocus placeholder="Enter contact name">
+        <br />
+    <label>Mobile No:</labe>
+        <!-- <input name="type" value="rty" type="hidden" pattern="/\d{10}/"> -->
+                <input id="inputPhone_2" name="visitorMobile" autofocus placeholder="Enter Mobile or Landline only">
+        <br />
+    <label>Email:</label>
+        <!-- <input name="type" value="" type="hidden"> -->
+                <input id="inputPhone_2" name="visitorEmail" autofocus placeholder="Enter email">
+         <br />
+    <lable>Select Date: </lable>
+    <select name="tax_days" id="days-tax" class="">
+    	<option value="0"> Select a day </option>
+        <option class="level-0" value="6">6th March 2016 - Sunday</option>
+    	<option class="level-0" value="7">7th March 2016 - Monday</option>
+    	<option class="level-0" value="8">8th March 2016 - Tuesday</option>
+    	<option class="level-0" value="9">9th March 2016 - Wednesday</option>
+    	<option class="level-0" value="10">10th March 2016 - Thursday</option>
+    	<option class="level-0" value="11">11th March 2016 - Friday</option>
+    	<option class="level-0" value="12">12th March 2016 - Saturday</option>
+    	<option class="level-0" value="13">13th March 2016 - Sunday</option>
+    </select>
+    <br />
+
+    <label>Select Time:</label><br/>
+        <input name="appTime" value="10 am to 11 am" type="radio">10 am to 11 am<br>
+        <input name="appTime" value="11 am to 12 am" type="radio">11 am to 12 am<br>
+        <input name="appTime" value="12 am to 1 pm" type="radio">12 am to 1 am<br>
+
+        <button type='submit' onclick='validate()'>Submit</button>
+    </form>
+
+    <script type='text/javascript'>
+
+        $(document).ready(function(){
+            dropdownDates();
+
+        });
+
+        var validate = function(){
+            debugger;
+            var $this = document.forms['appointmentForm'];
+            var vName = $this['visitorName'].value;
+            var vMobile = parseInt($this['visitorMobile'].value);
+            var vEmail = $this['visitorEmail'].value;
+            if(0 > vMobile.length || vMobile.length <= 12){
+                alert('Please enter a valid mobile number!');
+            }
+        };
+
+        var dropdownDates = function(){
+            var currDate = new Date();
+            var date = currDate.getDate(),
+                day = currDate.getDay(),
+                month = currDate.getMonth(),
+                hour = currDate.getHours();
+            var firstDate = $('#days-tax').find('.level-0')[0].value;
+            if(firstDate == day){
+                if(hour>=13.5){
+                    $('#days-tax').find('.level-0')[0].remove();
+                }
+            }
+        };
+
+    </script>
+
+</body>
+</html>

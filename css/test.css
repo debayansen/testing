@@ -1,0 +1,44 @@
+*{
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+header{
+    border: 2px solid red;
+    color: #fff;
+}
+.rowOne{
+    background-color: blue;
+    height:70px;
+}
+.rowTwo{
+    background-color: green;
+    height:70px;
+}
+.rowThree{
+    background-color: brown;
+    height:70px;
+}
+.rowFour{
+    background-color: orange;
+    height:70px;
+}
+
+.column1{
+    border: 2px solid black;
+}
+.column2{
+    border: 2px solid black;
+}
+.column3{
+    border: 2px solid black;
+}
+.column4{
+    border: 2px solid black;
+}
+.column5{
+    border: 2px solid black;
+}
+.column5{
+    border: 2px solid black;
+}

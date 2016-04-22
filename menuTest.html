@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>Menu POC</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <!-- Angular Material style sheet -->
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+      <!-- Angular Material requires Angular.js Libraries -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+      <!-- Angular Material Library -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <script src='js/menu.js'></script>
+      <link rel="stylesheet" href="css/menu.css">
+  </head>
+  <body ng-app="menuDemoBasic" layout="column" ng-cloak>
+
+          <div class="md-menu-demo" ng-controller="BasicDemoCtrl as ctrl" ng-cloak>
+                  <div class="menu-demo-container" layout-align="center center" layout="column">
+                    <h2 class="md-title">Simple dropdown menu</h2>
+
+                    <md-menu>
+                      <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+                        <md-icon md-menu-origin md-svg-icon="call:phone"></md-icon>
+                      </md-button>
+                      <md-menu-content width="4">
+                        <md-menu-item>
+                          <md-button ng-click="ctrl.redial($event)">
+                            <md-icon md-svg-icon="call:dialpad" md-menu-align-target></md-icon>
+                            Redial
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                          <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
+                            <md-icon md-svg-icon="call:voicemail"></md-icon>
+                            Check voicemail
+                          </md-button>
+                        </md-menu-item>
+                        <md-menu-divider></md-menu-divider>
+                        <md-menu-item>
+                          <md-button ng-click="ctrl.toggleNotifications()">
+                            <md-icon md-svg-icon="social:notifications-{{ctrl.notificationsEnabled ? 'off' : 'on'}}"></md-icon>
+                            {{ctrl.notificationsEnabled ? 'Disable' : 'Enable' }} notifications
+                          </md-button>
+                        </md-menu-item>
+                      </md-menu-content>
+                    </md-menu>
+                  </div>
+                </div>
+
+  </body>
+</html>

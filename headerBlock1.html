@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <!-- Angular Material style sheet -->
+      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Angular Material requires Angular.js Libraries -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+      <!-- Angular Material Library -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+      <script src='js/app.js'></script>
+      <!-- <link rel="stylesheet" href="css/test1.css"> -->
+      <style type="text/css" rel='stylesheet'>
+          .column1{
+              /*background-color: red;*/
+          }
+          .column1 img{
+              width: 100%;
+              min-width: 120px;
+          }
+          .column2{
+              /*background-color: green;*/
+          }
+          .column3{
+              background-color: #fff;
+              color: #fff;
+          }
+          .logo{
+              width: 100%;
+          }
+          .topLinks{
+              padding: 5px;
+              width: 20px;
+          }
+          .fa{
+              color: #00906e;
+          }
+      </style>
+  </head>
+  <body ng-app="test" layout="column" ng-cloak>
+      <header layout='column' flex='90' flex-xs>
+        <div layout='row'>
+          <div class="column1" flex-xs="30" flex-sm='30' flex-md='20'>
+              <img class='logo' flex src='images/logo.png' />
+          </div>
+          <div class="column2" flex layout-align='end end'>
+              <div class='topMenu' layout='row'flex layout-align='end start'>
+                  <a class='topLinks' href='#' hide-xs><i class="fa fa-download"></i><md-tooltip>DownLoad App</md-tooltip></a>
+                  <a class='topLinks' href='#' hide-xs><i class="fa fa-map-o"></i><md-tooltip>Locate Store</md-tooltip></a>
+                  <a class='topLinks' href='#' hide-xs><i class="fa fa-sign-in"></i><md-tooltip>Sign In</md-tooltip></a>
+                  <a class='topLinks' href='#'><i class="fa fa-shopping-cart"></i><md-tooltip>Shopping kart</md-tooltip></a>
+                  <a class='topLinks' href='#'><i class="fa fa-bell-o"></i><md-tooltip>Notifiactions</md-tooltip></a>
+                  <a class='topLinks' href='#' hide-gt-xs show-xs><i class="fa fa-ellipsis-v"></i></a>
+              </div>
+          </div>
+        </div>
+        <div layout='row' hide-xs layout-margin="10">
+          <div class="column1" flex="40">div3</div>
+          <div class="column2" flex>div4</div>
+        </div>
+        <div layout='row' hide-xs>
+          <div class="column1" flex="40">div5</div>
+          <div class="column2" flex>div6</div>
+        </div>
+      </header>
+  </body>
+</html>

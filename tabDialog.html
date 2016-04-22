@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <style rel='styleheet'>
+          .dialogdemoBasicUsage #popupContainer {
+            position: relative; }
+          .dialogdemoBasicUsage .footer {
+            width: 100%;
+            text-align: center;
+            margin-left: 20px; }
+          .dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+            font-size: 0.8em;
+            margin-top: 50px; }
+          .dialogdemoBasicUsage button {
+            width: 200px; }
+          .dialogdemoBasicUsage div#status {
+            color: #c60008; }
+        </style>
+
+    </head>
+    <body ng-app="dialogDemo1" ng-cloak>
+        <div ng-controller="AppCtrl" class="md-padding" id="popupContainer" ng-cloak>
+          <p class="inset">
+            Open a dialog over the app's content. Press escape or click outside to close the dialog and
+            send focus back to the triggering button.
+          </p>
+          <div class="dialog-demo-content" layout="row" layout-wrap layout-margin layout-align="center">
+            <md-button class="md-primary md-raised" ng-click="showAlert($event)"   >
+              Alert Dialog
+            </md-button>
+            <md-button class="md-primary md-raised" ng-click="showConfirm($event)" >
+              Confirm Dialog
+            </md-button>
+            <md-button class="md-primary md-raised" ng-click="showPrompt($event)"  >
+              Prompt Dialog
+            </md-button>
+            <md-button class="md-primary md-raised" ng-click="showAdvanced($event)">
+              Custom Dialog
+            </md-button>
+            <md-button class="md-primary md-raised" ng-click="showTabDialog($event)" >
+              Tab Dialog
+            </md-button>
+          </div>
+          <p class="footer">Note: The <b>Confirm</b> dialog does not use <code>$mdDialog.clickOutsideToClose(true)</code>.</p>
+          <div hide-gt-sm layout="row" layout-align="center center" flex>
+              <md-checkbox ng-model="customFullscreen" aria-label="Fullscreen Custom Dialog">Force Custom Dialog Fullscreen</md-checkbox>
+            </div>
+          <div ng-if="status" id="status">
+            <b layout="row" layout-align="center center" class="md-padding">
+              {{status}}
+            </b>
+          </div>
+        </div>
+
+
+
+
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+        <script src='js/tabDialog.js'></script>
+    </body>
+</html>
